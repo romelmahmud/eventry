@@ -1,4 +1,5 @@
 import { eventModel } from "@/modals/event-modals";
+import { userModel } from "@/modals/user-modals";
 import {
   replaceMongoIdInArray,
   replaceMongoIdInObject,
@@ -12,4 +13,8 @@ export const getAllEvents = async () => {
 export const getAllEventById = async (eventId) => {
   const event = await eventModel.findById(eventId).lean();
   return replaceMongoIdInObject(event);
+};
+
+export const createUser = async (user) => {
+  return await userModel.create(user);
 };
