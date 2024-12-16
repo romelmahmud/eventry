@@ -11,12 +11,7 @@ module.exports = {
       padding: "1rem",
       maxWidth: "1919px",
     },
-    // extend: {
-    //   colors: {
-    //     background: "var(--background)",
-    //     foreground: "var(--foreground)",
-    //   },
-    // },
+    extend: {},
   },
   plugins: [require("@tailwindcss/typography")],
 };
