@@ -24,7 +24,12 @@ const HeroSection = ({ eventInfo }) => {
             <span>{eventInfo?.going_ids?.length} Going</span>
           </div>
         </div>
-        <ActionsButtons fromDetails={true} />
+        <ActionsButtons
+          fromDetails={true}
+          eventId={eventInfo?.id}
+          interestedUserIds={eventInfo?.interested_ids}
+          goingUserIds={eventInfo?.going_ids}
+        />
       </div>
     </section>
   );
